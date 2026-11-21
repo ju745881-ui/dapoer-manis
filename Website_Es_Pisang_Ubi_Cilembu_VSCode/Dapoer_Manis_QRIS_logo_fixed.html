@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dapoer Manis | Es Pisang Ubi Cilembu</title>
+<style>
+:root{--gold:#ffbf16;--orange:#f28b13;--brown:#603414;--cream:#fff8df;--green:#477b35}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family: "Trebuchet MS",Arial,sans-serif;color:var(--brown);background:linear-gradient(135deg,#fff9df,#ffe7a3,#fff3d0);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:360px;height:360px;border-radius:50%;filter:blur(70px);opacity:.28;z-index:-1;animation:drift 12s ease-in-out infinite alternate}
+body:before{background:#ffc229;top:10%;left:-140px}body:after{background:#79b85b;right:-150px;bottom:0;animation-delay:-5s}
+@keyframes drift{to{transform:translate(80px,-55px) scale(1.18)}}
+header{position:sticky;top:0;z-index:10;background:#fff8dfdd;backdrop-filter:blur(12px);box-shadow:0 5px 20px #75430d18}
+.nav{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:1.25rem;font-weight:900;line-height:1.05}.brand span{display:block;font-size:.72rem;color:#8b632e;letter-spacing:1px;margin-top:4px}
+.logo{font-size:2.1rem;margin-right:8px}.brandwrap{display:flex;align-items:center}
+.brand-logo-img{display:block;width:38px;height:38px;min-width:38px;object-fit:contain;border-radius:50%;margin-right:8px;flex-shrink:0}
+nav{display:flex;gap:20px;align-items:center}nav a{color:var(--brown);text-decoration:none;font-weight:800;font-size:.92rem}nav a:hover{color:#d67b00}
+.btn{display:inline-block;text-decoration:none;border:0;border-radius:30px;padding:13px 22px;background:linear-gradient(120deg,#ffd83d,#ffad08);color:#56300b;font-weight:900;box-shadow:0 7px 0 #d9800b,0 12px 25px #eaa51e55;transition:.2s;cursor:pointer}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 0 #d9800b,0 15px 28px #eaa51e55}
+.hero{max-width:1150px;margin:34px auto 25px;padding:28px 22px;display:grid;grid-template-columns:1.05fr .95fr;gap:25px;align-items:center;min-height:500px}
+.tag{display:inline-block;background:#e6f1d7;color:#477b35;padding:8px 15px;border-radius:20px;font-weight:900;font-size:.82rem}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:.98;margin:20px 0 14px;letter-spacing:-2px;color:#603414}
+h1 em{font-style:normal;color:#e78b08;text-shadow:2px 3px 0 #ffe19a}
+.lead{font-size:1.1rem;line-height:1.7;max-width:520px;color:#79532d}
+.price{font-size:1.7rem;font-weight:1000;margin:22px 0;color:#d87900}.price small{font-size:.9rem;color:#80542b}
+.hero-art{position:relative;min-height:420px;display:grid;place-items:center}
+.cup{width:min(82%,360px);height:360px;border-radius:38px 38px 75px 75px;background:linear-gradient(90deg,#e8a34caa,#fff0c7cc 28%,#e6a247aa 70%,#fff1c9cc);border:8px solid #fff9e5;box-shadow:inset 0 0 25px #9b541c44,0 25px 45px #75430d35;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-4deg);animation:bob 4s ease-in-out infinite;position:relative}
+.cup:before{content:"";position:absolute;top:-23px;width:112%;height:42px;border-radius:50%;background:#fff9e7;border:7px solid #f4d28b;box-shadow:0 6px 12px #77420d22}
+.cup:after{content:"";position:absolute;top:-8px;width:84%;height:22px;border-radius:50%;background:#f6c45c}
+.drink{font-size:7rem;filter:drop-shadow(0 8px 5px #9a5a1c44);margin-top:-12px}.cupname{font-size:1.4rem;font-weight:1000;text-align:center;background:#fff4d7d9;padding:12px 18px;border-radius:18px;box-shadow:0 4px 12px #7d4c1b22}
+.fruit{position:absolute;font-size:4rem;animation:bob 3.5s ease-in-out infinite}.fruit.one{left:2%;bottom:8%}.fruit.two{right:0;top:9%;animation-delay:-1s}.fruit.three{right:4%;bottom:0;font-size:3rem;animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-13px) rotate(-2deg)}}
+.section{max-width:1100px;margin:30px auto;padding:55px 22px}
+.section-title{text-align:center;font-size:2.2rem;margin:0 0 10px}.sub{text-align:center;color:#8b6a3e;margin:0 auto 30px;max-width:620px;line-height:1.6}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fffdf4e8;border:1px solid #f4d99d;border-radius:24px;padding:25px;box-shadow:0 12px 28px #86500d12;transition:.25s}
+.card:hover{transform:translateY(-8px) rotate(-.5deg);box-shadow:0 18px 35px #86500d22}
+.card .emoji{font-size:2.4rem}.card h3{margin:12px 0 8px}.card p,.card li{line-height:1.65;color:#76552e}
+.card ul{padding-left:20px;margin-bottom:0}
+.poster{max-width:920px;margin:auto;background:#fffdf4;padding:12px;border-radius:25px;box-shadow:0 18px 45px #75430d25}
+.poster img{display:block;width:100%;height:auto;border-radius:16px}
+.pricebox{max-width:760px;margin:auto;text-align:center;background:linear-gradient(135deg,#fff0b4,#ffd45a);border:3px dashed #e49a17;border-radius:30px;padding:35px 20px;box-shadow:0 15px 30px #9c5e1420}
+.pricebox strong{display:block;font-size:clamp(2.8rem,7vw,4.7rem);color:#a44c08;text-shadow:2px 3px #fff}
+footer{background:#603414;color:#fff3d1;text-align:center;padding:28px 18px;margin-top:55px}
+.float{border:0;cursor:pointer}
+.qris-overlay{display:none;position:fixed;inset:0;background:#2d1b0dcc;z-index:30;align-items:center;justify-content:center;padding:18px}
+.qris-overlay.aktif{display:flex}
+.qris-modal{position:relative;width:min(100%,430px);max-height:90vh;overflow:auto;background:#fffdf4;border:3px solid #f4d28b;border-radius:26px;padding:27px 22px;text-align:center;box-shadow:0 20px 60px #0005;animation:muncul .25s ease}
+@keyframes muncul{from{opacity:0;transform:translateY(15px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.qris-modal h2{margin:4px 0 8px;color:#603414}
+.qris-modal p{color:#79532d;line-height:1.55}
+.qris-gambar{display:grid;place-items:center;margin:18px auto;background:white;border:2px dashed #e5bd68;border-radius:18px;padding:12px;min-height:230px;max-width:280px}
+.qris-gambar img{display:block;width:100%;max-width:250px;height:auto;object-fit:contain}
+.qris-placeholder{color:#8b6a3e;font-size:.9rem;line-height:1.5}
+.qris-harga{font-size:2rem;font-weight:1000;color:#d87900;margin:12px 0}
+.qris-tutup{position:absolute;right:13px;top:10px;border:0;background:#f8e8c2;color:#603414;border-radius:50%;width:36px;height:36px;font-size:1.35rem;cursor:pointer}
+.qris-catatan{font-size:.83rem;background:#fff3d0;border-radius:12px;padding:10px}
+.qris-sudah{display:inline-block;margin-top:10px}
+body.modal-terbuka{overflow:hidden}
+.float{position:fixed;bottom:18px;right:18px;z-index:8;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;background:#38b86c;color:white;text-decoration:none;font-size:1.8rem;box-shadow:0 8px 22px #174d2c55}
+@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;text-align:center;margin-top:15px}.lead{margin:auto}.hero-art{min-height:360px}.cup{height:300px;width:270px}.drink{font-size:5rem}.cards{grid-template-columns:1fr}.section{padding-top:35px}.fruit{font-size:3rem}.logo {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  margin-right: 8px;
+  border-radius: 50%;
+}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+ <div class="brandwrap"><img src="logo.jpeg" class="brand-logo-img" alt="Logo Dapoer Manis"><div class="brand">DAPOER MANIS<span>SEGAR • SEHAT • LEZAT</span></div></div>
+ <nav><a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#bahan">Bahan & Alat</a><a href="#harga">Harga</a><a href="#poster">Poster</a></nav>
+ <button class="btn" type="button" onclick="bukaQRIS()">Pesan Sekarang</button>
+</div></header>
+<main>
+<section class="hero" id="beranda">
+ <div><span class="tag">✨ MINUMAN SEGAR FAVORIT</span>
+  <h1>Es Pisang <em>Ubi Cilembu</em></h1>
+  <p class="lead">Perpaduan pisang pilihan dan ubi Cilembu yang manis alami, lembut, creamy, dan menyegarkan. Cocok dinikmati kapan saja!</p>
+  <div class="price">Rp 15.000 <small>/ cup</small></div>
+  <a class="btn" href="#harga">Cobain Sekarang →</a>
+ </div>
+ <div class="hero-art"><span class="fruit one">🍌</span><span class="fruit two">🍃</span><span class="fruit three">🍠</span>
+  <div class="cup"><div class="drink">🍌🧊</div><div class="cupname">Dapoer Manis<br><small>Es Pisang Ubi Cilembu</small></div></div>
+ </div>
+</section>
+<section class="section" id="tentang"><h2 class="section-title">Manis Alami, Bikin Happy! 💛</h2><p class="sub">Dapoer Manis menghadirkan minuman kekinian dengan bahan sederhana yang dipadukan menjadi rasa istimewa.</p>
+ <div class="cards">
+  <article class="card"><div class="emoji">🌿</div><h3>Bahan Pilihan</h3><p>Menggunakan pisang matang dan ubi Cilembu yang punya rasa manis khas.</p></article>
+  <article class="card"><div class="emoji">❄️</div><h3>Segar & Creamy</h3><p>Disajikan dingin dengan perpaduan tekstur lembut dan rasa yang nikmat.</p></article>
+  <article class="card"><div class="emoji">💛</div><h3>Harga Bersahabat</h3><p>Cocok untuk teman santai, belajar, atau berkumpul bersama teman.</p></article>
+ </div>
+</section>
+<section class="section" id="bahan"><h2 class="section-title">Bahan & Alat</h2><p class="sub">Semua yang dibutuhkan untuk membuat Es Pisang Ubi Cilembu.</p>
+ <div class="cards">
+  <article class="card"><div class="emoji">🍌</div><h3>Bahan-bahan</h3><ul><li>Pisang matang</li><li>Ubi Cilembu kukus</li><li>Susu cair</li><li>Gula atau madu secukupnya</li><li>Es batu</li><li>Air matang</li></ul></article>
+  <article class="card"><div class="emoji">🥤</div><h3>Alat-alat</h3><ul><li blender</li><li>Gelas saji / cup plastik</li><li>Sendok</li><li>Pisau</li><li>Talenan</li><li>Wadah dan saringan</li></ul></article>
+  <article class="card"><div class="emoji">🧑‍🍳</div><h3>Cara membuat</h3><ul><li>Kukus ubi Cilembu hingga empuk.</li><li>Masukkan pisang, ubi, susu, dan pemanis ke blender.</li><li>Tambahkan es batu, lalu blender hingga lembut.</li><li>Tuang ke cup dan sajikan dingin.</li></ul></article>
+ </div>
+</section>
+<section class="section" id="harga"><h2 class="section-title">Yuk, Cobain Rasanya!</h2><p class="sub">Satu cup penuh kesegaran untuk menemani harimu.</p>
+ <div class="pricebox"><div style="font-size:1.2rem;font-weight:900">HARGA SPESIAL</div><strong>Rp 15.000</strong><div style="font-weight:800">per cup • Segar, manis, dan nikmat!</div><br><button class="btn" type="button" onclick="bukaQRIS()">Pesan Sekarang 🛒</button></div>
+</section>
+<section class="section" id="poster"><h2 class="section-title">Poster Promosi</h2><p class="sub">Poster promosi Es Pisang Ubi Cilembu dari Dapoer Manis.</p>
+ <div class="poster"><img src="poster dua.jpeg" alt="Poster promosi Es Pisang Ubi Cilembu"></div>
+</section>
+</main>
+<div class="qris-overlay" id="qrisOverlay" role="dialog" aria-modal="true" aria-labelledby="judulQRIS" onclick="if(event.target===this) tutupQRIS()">
+ <div class="qris-modal">
+  <button class="qris-tutup" type="button" onclick="tutupQRIS()" aria-label="Tutup">×</button>
+  <div style="font-size:2.2rem">🍌💛</div>
+  <h2 id="judulQRIS">Pembayaran QRIS</h2>
+  <p>Terima kasih sudah memilih <b>Dapoer Manis</b>! Scan kode QRIS di bawah ini untuk membayar pesananmu.</p>
+  <div class="qris-harga">Rp 15.000</div>
+  <div class="qris-gambar">
+   <img src="qris.png" alt="Kode QRIS Dapoer Manis" onerror="this.style.display='none';document.getElementById('qrisPlaceholder').style.display='block'">
+   <div class="qris-placeholder" id="qrisPlaceholder" style="display:none">📷<br><b>Gambar QRIS belum dipasang</b><br>Simpan foto QRIS tokomu dengan nama <b>qris.png</b>, lalu letakkan satu folder dengan file HTML ini.</div>
+  </div>
+  <p class="qris-catatan">Pastikan nama merchant dan nominal pembayaran sudah benar sebelum menyelesaikan transaksi.</p>
+  <button class="btn qris-sudah" type="button" onclick="konfirmasiWhatsApp()">Saya Sudah Bayar</button>
+ </div>
+</div>
+<script>
+function bukaQRIS(){
+ document.getElementById('qrisOverlay').classList.add('aktif');
+ document.body.classList.add('modal-terbuka');
+}
+function tutupQRIS(){
+ document.getElementById('qrisOverlay').classList.remove('aktif');
+ document.body.classList.remove('modal-terbuka');
+}
+function konfirmasiWhatsApp(){
+ // GANTI nomor di bawah dengan nomor WhatsApp tokomu.
+ // Gunakan kode negara 62, tanpa tanda + dan tanpa angka 0 di depan.
+ const nomorWA = '6281938781938'
+ const pesan = 'Halo Dapoer Manis! Saya sudah melakukan pembayaran Es Pisang Ubi Cilembu.\n\nTotal pembayaran: Rp15.000\nMohon konfirmasi pesanan saya. Terima kasih!';
+ const url = 'https://wa.me/' + nomorWA + '?text=' + encodeURIComponent(pesan);
+ window.open(url, '_blank');
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')tutupQRIS();});
+</script>
+<footer><div style="font-size:1.7rem">🍌 <b>Dapoer Manis</b></div><p>Es Pisang Ubi Cilembu • Segar • Sehat • Lezat</p><small>© 2026 Dapoer Manis. Dibuat dengan penuh semangat.</small></footer>
+<button class="float" type="button" onclick="bukaQRIS()" aria-label="Pesan sekarang">🛒</button>
+</body></html>
